@@ -24,11 +24,11 @@ class ContinentsContainer extends Component {
     render() {
         return (
             <div>
-                <select onChange={this.chooseContinent}>
+                <select onChange={this.chooseContinent.bind(this)}>
                     <option value="Europa">Europa</option>
                     <option value="Afryka">Afryka</option>
                 </select>
-                <CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry}/>
+                <CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry.bind(this)}/>
             </div>
         )
     }
